@@ -6,7 +6,8 @@ namespace Line_Comparison
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(" Welcome to Line Comparison Computation Program ");
+            Line line = new Line(0, 2, 4, 8);
+            line.Calculate();
         }
     }
 }
