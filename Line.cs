@@ -6,21 +6,39 @@ namespace Line_Comparison
 {
     class Line
     {
-        public int x1, x2, y1, y2;
-        public Line(int x1, int x2, int y1, int y2)
+        public void TwoLinesComparison()
         {
-            this.x1 = x1;
-            this.x2 = x2;
-            this.y1 = y1;
-            this.y2 = y2;
+            double x1, x2, y1, y2;
+            double a1, a2, b1, b2;
+            Console.WriteLine("Enter co-ordinates of line1");
+            Console.WriteLine("Enter co-ordinates (x1, y1): ");
+            x1 = double.Parse(Console.ReadLine());
+            y1 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Enter co-ordinates (x2, y2): ");
+            x2 = double.Parse(Console.ReadLine());
+            y2 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Enter co-ordinates of line2");
+            Console.WriteLine("Enter co-ordinates (a1, b1): ");
+            a1 = double.Parse(Console.ReadLine());
+            b1 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Enter co-ordinates (a2, b2): ");
+            a2 = double.Parse(Console.ReadLine());
+            b2 = double.Parse(Console.ReadLine());
+            double length1 = Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2));
+            double length2 = Math.Sqrt(Math.Pow((a2 - a1), 2) + Math.Pow((b2 - b1), 2));
 
+            if (length1 == length2)
+            {
+                Console.WriteLine("The Length of two lines is equal.");
+            }
+            else if (length1 > length2)
+            {
+                Console.WriteLine("The Length of line 1 is greater than line 2.");
+            }
+            else if (length1 < length2)
+            {
+                Console.WriteLine("The Length of line 1 is lesser than line 2.");
+            }
         }
-
-        public void Calculate()
-        {
-            double length = Math.Sqrt((x2 - x1) ^ 2 + (y2 - y1) ^ 2);
-            Console.WriteLine("Length of the line is:" + length);
-        }
-
     }
 }
