@@ -40,5 +40,15 @@ namespace Line_Comparison
                 Console.WriteLine("The Length of line 1 is lesser than line 2.");
             }
         }
+<<<<<<< HEAD
+=======
+
+        public double Calculate()
+        {
+            double length = Math.Sqrt((x2 - x1) ^ 2 + (y2 - y1) ^ 2);
+            return length;
+        }
+
+>>>>>>> UC4_LinesComparisonUsingMethod
     }
 }
